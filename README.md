@@ -31,7 +31,7 @@ r.GET("/ping", func(c *gin.Context) {
 })
 
 // Start HTTP server
-if err := r.Run(utils.GetConf().GetString(":8080")); err != nil {
+if err := r.Run(":8080"); err != nil {
 	log.WithError(err).Fatal("server failed to start")
 }
 ```
