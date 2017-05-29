@@ -37,3 +37,8 @@ if err := r.Run(":8080"); err != nil {
 ```
 
 More info about the apex-log package [medium](https://medium.com/@tjholowaychuk/apex-log-e8d9627f4a9a)
+
+
+TODO
+* Apex log levels info/warning/error/fatal
+* Unit-testing
