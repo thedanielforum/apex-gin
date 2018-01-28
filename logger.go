@@ -1,11 +1,13 @@
 package apex_gin
 
 import (
-	"github.com/gin-gonic/gin"
 	"time"
+
 	"github.com/apex/log"
+	"github.com/gin-gonic/gin"
 )
 
+// Handler gin middleware handler
 func Handler(message string) gin.HandlerFunc {
 	var skip map[string]struct{}
 
@@ -29,10 +31,10 @@ func Handler(message string) gin.HandlerFunc {
 
 			log.WithFields(log.Fields{
 				"status_code": statusCode,
-				"latency": latency,
-				"client_ip": clientIP,
-				"method": method,
-				"path": path,
+				"latency":     latency,
+				"client_ip":   clientIP,
+				"method":      method,
+				"path":        path,
 			}).Info(message)
 		}
 	}

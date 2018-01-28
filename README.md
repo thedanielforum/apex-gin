@@ -2,6 +2,8 @@
 
 Middleware for [gin-gonic](https://github.com/gin-gonic/gin) and [apex-log](https://github.com/apex/log)
 
+[![GoDoc](https://godoc.org/github.com/thedanielforum/apex-gin?status.svg)](https://godoc.org/github.com/thedanielforum/apex-gin)
+
 Example output
 ```text
 INFO[0005] client_ip=127.0.0.1 latency=168.439199ms method=PUT path=/v1/user/info/123 status_code=200 message=test message
@@ -20,7 +22,7 @@ log.SetHandler(text.New(os.Stderr))
 // Configure gin
 r := gin.New()
 
-// Tell gin to use es_logger middleware
+// Tell gin to use apex_gin middleware
 r.Use(apex_gin.Handler("test message"))
 
 // Define routes
